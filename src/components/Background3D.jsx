@@ -19,7 +19,7 @@ export default function Background3D() {
           floatIntensity={2} // Amplitude du mouvement de haut en bas
         >
           <mesh rotation={[0.5, 0.5, 0]}>
-            {/* Noegit add .ud torique) */}
+            {/* Noeud torique) */}
             <torusKnotGeometry args={[5, 1.5, 128, 32]} />
             {/* Le matériau : fil de fer violet qui réagit aux lumières */}
             <meshStandardMaterial
