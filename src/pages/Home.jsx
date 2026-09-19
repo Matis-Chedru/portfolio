@@ -27,7 +27,7 @@ export default function Home() {
                 </h1>
 
                 <p className="max-w-2xl text-gray-400 text-lg md:text-xl leading-relaxed mt-2">
-                    Étudiant en BUT Informatique (Parcours RACDV) à Montpellier. Passionné par la conception logicielle, l'optimisation des performances et la résolution de bugs complexes.
+                    Étudiant en informatique à Montpellier. Curieux de nature, passionné par la photo, les jeux vidéo et l'apprentissage sous toutes ses formes. J'aime farfouiller, comprendre et découvrir de nouveaux sujets.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mt-4">

@@ -41,7 +41,7 @@ export default function Projects() {
             transition={{ duration: 0.6 }}
             className="mb-16 border-l-4 border-accentGreen pl-6"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Dépôts & Projets</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Projets</h1>
           <p className="text-gray-400 font-mono text-sm md:text-base">
             ~/portfolio/dev/projets $ ls -la
           </p>
