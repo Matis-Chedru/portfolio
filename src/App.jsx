@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Photos from './pages/Photos';
 import Sandbox from './pages/Sandbox';
+import IutGuessr from './pages/IutGuessr';
 
 function App() {
   // Script existant pour permettre le défilement à la souris
@@ -60,6 +61,7 @@ function App() {
                 <Route path="/projets" element={<Projects />} />
                 <Route path="/photographie" element={<Photos />} />
                 <Route path="/jeux" element={<Sandbox />} />
+                <Route path="/jeux/iut-guessr" element={<IutGuessr/>} />
               </Routes>
             </main>
 

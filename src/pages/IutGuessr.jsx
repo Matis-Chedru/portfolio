@@ -8,6 +8,7 @@ import 'leaflet/dist/leaflet.css';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import PanoramaViewer from '../components/PanoramaViewer';
+import { allLocations } from '../data/locations';
 
 let DefaultIcon = L.icon({
     iconUrl: icon,
@@ -24,11 +25,8 @@ const targetIcon = L.divIcon({
     iconAnchor: [8, 8]
 });
 
-const allLocations = [
-    { id: 1, image: '/images/pano1.webp', lat: 43.63558608333335, lng: 3.8503777777777826 },
-    { id: 2, image: '/images/pano2.webp', lat: 43.635456, lng: 3.850487 },
-    { id: 3, image: '/images/pano3.webp', lat: 43.63558886111111, lng: 3.8510999722222294 }
-];
+// Définition du nombre de manches par partie (standard GeoGuessr)
+const ROUNDS_PER_GAME = 5;
 
 function calculateDistance(lat1, lon1, lat2, lon2) {
     const R = 6371e3;
@@ -75,7 +73,11 @@ export default function IutGuessr() {
 
     const startSolo = () => {
         if (!pseudo) setPseudo('Joueur');
-        setGameLocations(shuffleArray(allLocations).slice(0, 3));
+
+        // Sélectionne N manches aléatoires parmi TOUTES les locations
+        const randomizedLocations = shuffleArray(allLocations);
+        setGameLocations(randomizedLocations.slice(0, ROUNDS_PER_GAME));
+
         setGameState('PLAYING');
         setRound(1);
         setScore(0);
