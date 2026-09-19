@@ -10,33 +10,13 @@ const gamesData = [
         description: "Saurez-vous retrouver dans quelle salle de l'IUT de Montpellier a été prise cette photo ? Un GeoGuessr local.",
         tags: ["React", "Maps API", "Local Storage"],
         color: "from-purple-500 to-accentPink",
-        // Ajout du lien vers la page du jeu
         link: "/jeux/iut-guessr"
-    },
-    {
-        id: 2,
-        title: "Générateur de Palettes",
-        status: "Concept",
-        description: "Un outil pour extraire instantanément les couleurs dominantes d'une image déposée sur la page.",
-        tags: ["Canvas API", "Algorithmique"],
-        color: "from-accentGreen to-emerald-600",
-        link: "#"
-    },
-    {
-        id: 3,
-        title: "Simulation Particules",
-        status: "Expérience",
-        description: "Un moteur physique rudimentaire tournant dans le navigateur pour simuler des collisions.",
-        tags: ["WebGL", "Mathématiques"],
-        color: "from-blue-500 to-cyan-400",
-        link: "#"
     }
 ];
 
 export default function Sandbox() {
     return (
         <div className="w-full max-w-6xl mt-32 pb-32">
-
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -66,10 +46,9 @@ export default function Sandbox() {
                                     {game.title}
                                 </h2>
                                 <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-purple-400">
-                  {game.status}
-                </span>
+                                    {game.status}
+                                </span>
                             </div>
-
                             <p className="text-gray-400 text-base mb-6 max-w-md">
                                 {game.description}
                             </p>
@@ -79,12 +58,10 @@ export default function Sandbox() {
                             <div className="flex gap-2">
                                 {game.tags.map((tag, i) => (
                                     <span key={i} className="text-xs font-mono text-gray-500">
-                    #{tag}
-                  </span>
+                                        #{tag}
+                                    </span>
                                 ))}
                             </div>
-
-                            {/* Le bouton Play devient un lien de navigation si un lien est fourni */}
                             {game.link !== "#" ? (
                                 <Link to={game.link} className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:scale-110">
                                     <Play size={20} className="ml-1" />
@@ -95,11 +72,9 @@ export default function Sandbox() {
                                 </button>
                             )}
                         </div>
-
                     </motion.div>
                 ))}
             </div>
-
         </div>
     );
 }
