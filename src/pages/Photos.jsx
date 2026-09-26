@@ -33,7 +33,7 @@ export default function Photos() {
             >
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Chambre Noire</h1>
                 <p className="text-gray-400 font-mono text-sm md:text-base">
-                    ~/portfolio/art/photographie $ ls -la
+                    ~/portfolio/art/photographie $ ls
                 </p>
             </motion.div>
 

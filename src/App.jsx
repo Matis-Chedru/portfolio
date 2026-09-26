@@ -10,6 +10,7 @@ import Projects from './pages/Projects';
 import Photos from './pages/Photos';
 import Sandbox from './pages/Sandbox';
 import IutGuessr from './pages/IutGuessr';
+import ParticlesSim from "./pages/ParticlesSim.jsx";
 
 function App() {
   // Script existant pour permettre le défilement à la souris
@@ -62,6 +63,7 @@ function App() {
                 <Route path="/photographie" element={<Photos />} />
                 <Route path="/jeux" element={<Sandbox />} />
                 <Route path="/jeux/iut-guessr" element={<IutGuessr/>} />
+                <Route path="/jeux/particules" element={<ParticlesSim/>} />
               </Routes>
             </main>
 

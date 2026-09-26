@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 export default function Background3D() {
   const location = useLocation();
 
-  if (location.pathname === '/photographie' || location.pathname === '/jeux/iut-guessr') {
+  if (location.pathname === '/photographie' || location.pathname === '/jeux/iut-guessr' || location.pathname === '/jeux/particules') {
     return null;
   }
 

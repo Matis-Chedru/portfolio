@@ -163,7 +163,7 @@ export default function IutGuessr() {
                                 <label className="block text-xs font-mono text-gray-500 uppercase tracking-wider mb-2">Identifiant</label>
                                 <input
                                     type="text"
-                                    placeholder="Ex: Matis_"
+                                    placeholder="Entrez votre pseudo"
                                     maxLength="12"
                                     value={pseudo}
                                     onChange={(e) => setPseudo(e.target.value)}
