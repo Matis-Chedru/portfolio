@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Photos from './pages/Photos';
 import Sandbox from './pages/Sandbox';
-import IutGuessr from './pages/IutGuessr';
+import IutGuessr from './features/iut-guessr/IutGuessr';
 
 function App() {
   return (

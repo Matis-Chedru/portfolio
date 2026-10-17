@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 export default function Navbar() {
   const location = useLocation();
 
-  if (location.pathname === '/jeux/iut-guessr' || location.pathname === '/jeux/particules') {
+  if (location.pathname.startsWith('/jeux/')) {
     return null;
   }
 
